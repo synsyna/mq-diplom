@@ -16,6 +16,10 @@
     font-family: Open-sans, sans-serif;
   }
   
+h1 h2 h3 {
+    margin: 0;
+    padding: 0;
+}
   .header-wrapper {
     background-image: url("https://github.com/netology-code/html-2-diploma/blob/master/sources/images/banner-bg.jpg?raw=true");
     background-size: 100% 100%;
@@ -103,7 +107,9 @@
     color: #0f0d0e;
     text-transform: uppercase;
     text-align: center;
+    line-height: 29px;
     margin-top: 63px;
+    margin-bottom: 41px;
     font-weight: bold;
   }
   .trends-title::after {
@@ -114,24 +120,69 @@
     border-bottom: 3px solid #e1d9bd;
     width: 66px;
   }
+
+
   .trends {
     display: flex;
+    gap: 4px;
     justify-content: space-between;
+    margin-bottom: 65px;
+    position: relative;
   }
-  .trebds-card {
-    background-image: url("images/2.jpg");
-    width: 407px;
-    height: 419px;
+
+
+  .trends-card-interior-img {
+    background-image: url("../images/trend1.jpg");
   }
+
+
+  .trends-card-bg {
+    width: 100%;
+    height: 320px;
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    z-index: 0;
+    position: relative;
+  } 
+
+
+  .trends-card-bg::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #000;
+    opacity: 0.6;
+  }
+
+
+  .trends-card-wrapper {
+    box-sizing: border-box;
+    border: 3px solid rgb(181, 159, 91, .6);
+    padding-top: 40px;
+    padding-bottom: 32px;
+    padding-left: 33px;
+    margin-left: 18px;
+    margin-right: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
   .trends-card-title {
     font-size: 14px;
     color: #b59f5b;
     font-weight: bold;
     line-height: 40px;
     text-transform: uppercase;
-    margin-right: 20px;
-    margin-bottom: 10px;
   }
+
+
   .ternds-card-info {
     font-size: 20px;
     color: #fff;
@@ -139,6 +190,22 @@
     text-transform: uppercase;
     line-height: 24px;
   }
+
+
+  .trends-card-food-img {
+    background-image: url("../images/trend2.jpg");
+  }
+
+  
+  .trends-card-travel-img {
+    background-image: url("../images/trend3.jpg");
+  }
+  
+
+  .trends-card-health-img {
+    background-image: url("../images/trend4.jpg");
+  }
+
 
   .main-content {
       display: flex;
@@ -148,12 +215,14 @@
       width: 1170px;
   }
   
+
   .news {
       margin-top: 64px;
       display: flex;
       width: 779px;
   }
   
+
   .news-img {
       box-sizing: border-box;
       width: 381px;
@@ -161,12 +230,14 @@
       margin-right: 31px;
   }
   
+
   .news-content {
       box-sizing: border-box;
       width: 100%;
       height: 100%;
   }
   
+
   .news-content-tags-list {
       display: flex;
       width: 100%;
@@ -460,7 +531,6 @@
   }
   .tags-container-item {
       display: block;
-      box-sizing: border-box;
       padding: 9px 14px;
       margin-right: 5px;
       margin-bottom: 6px;
@@ -524,6 +594,141 @@
       vertical-align: sub;
   }
   
+.ad-title {
+    font-size: 20px;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 218px;
+    font-weight: bold;
+    line-height: 29px;
+  }
+
+
+  .ad-title::after {
+    display: block;
+    content: '';
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: 3px solid #e1d9bd;
+    width: 66px;
+  }
+
+.ad-cards {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+
+}
+
+
+.ad-cards-items-content {
+    box-sizing: border-box;
+    width: 347px;
+    height: 267px;
+    border: 3px solid #d3c59d;
+    padding-left: 23px;
+    padding-right: 25px;
+    padding-top: 25px;
+    position: relative;
+    z-index: 0;
+}
+
+.ad-cards-items-content-pillow::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("../images/shop-item-desk1.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 203px;
+    left: 22px;
+    right: 24px;
+    bottom: 235px;
+    z-index: -1;
+}
+.ad-cards-items-content-toy::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("../images/shop-item-desk2.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 203px;
+    left: 22px;
+    right: 24px;
+    bottom: 235px; 
+    z-index: -1;
+}
+.ad-cards-items-content-frame::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("../images/shop-item-desk3.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 203px;
+    left: 22px;
+    right: 24px;
+    bottom: 235px;
+    z-index: -1;
+}
+.ad-cards-items-content-info-title {
+    box-sizing: border-box;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 24px;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.ad-cards-items-content-info-description {
+    font-size: 15px;
+    color: #000;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.ad-cards-items-content-info-description-link {
+    color: #b59f5b;
+    text-decoration: none;
+}
+
+.ad-cards-items-sale {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.ad-cards-items-content-old-price {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+	text-decoration: line-through;
+}
+
+.ad-cards-items-content-current-price {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.ad-button-style {
+    background-color: #b59f5b;
+    width: 140px;
+    height: 48px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
   .social-media {
       box-sizing: border-box;
       width: 1170px;
