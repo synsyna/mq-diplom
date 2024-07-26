@@ -1069,12 +1069,13 @@ h1 h2 h3 {
     gap: 65px;
 }
 
-.ad-cards-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.ad-img {
+    width: 100%;
 }
 
+.ad-picture {
+    margin: 0 auto;
+}
 
 
 .ad-cards-items-content {
