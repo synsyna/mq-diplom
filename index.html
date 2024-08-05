@@ -241,7 +241,6 @@
 <div class="newsletter">
     <h2 class="newsletter-title">рассылка</h2>
         <form class="newsletter-email">
-        
             <input class="newsletter-email-contain" name="query" placeholder="Ваш email-адрес" required>
 <label class="visually-hidden">Введите вашу почту"</label>
             <button class="newsletter-button">подписаться</button>
@@ -312,11 +311,11 @@
         </div>
     </article>
     <article class="ad-cards-items">
-        <picture class="picture">
+        <picture class="ad-picture">
             <source srcset="images/shop-item-desk2.jpg" media="(min-width: 1200px)">
             <source srcset="images/shop-item-tablet2.jpg" media="(min-width: 640px) and (max-width: 1200px)">
             <source srcset="images/shop-item-mobile2.jpg" media="(max-width: 640px)">
-            <img class="class" src="images/shop-item-desk2.jpg" alt="игрушка зайчик">
+            <img class="ad-img" src="images/shop-item-desk2.jpg" alt="игрушка зайчик">
         </picture>
         <div class="ad-cards-items-content">
             <div class="ad-cards-items-content-info">
@@ -334,11 +333,11 @@
         </div>
     </article>
     <article class="ad-cards-items">
-        <picture class="picture">
+        <picture class="ad-picture">
             <source srcset="images/shop-item-desk3.jpg" media="(min-width: 1200px)">
             <source srcset="images/shop-item-tablet3.jpg" media="(min-width: 640px) and (max-width: 1200px)">
             <source srcset="images/shop-item-mobile3.jpg" media="(max-width: 640px)">
-            <img class="class" src="images/shop-item-desk3.jpg" alt="шестиугольная рамка">
+            <img class="ad-img" src="images/shop-item-desk3.jpg" alt="шестиугольная рамка">
         </picture>
         <div class="ad-cards-items-content">
             <div class="ad-cards-items-content-info">
@@ -378,6 +377,36 @@
     </ul>
 </div>
 <div class="copyright"><a class="copyright-link" href="#0">Copyright © 2009–2019 City Blog LLC.</a></div>
-</footer>   
+</footer>
+
+<div class="pop-up visually-hidden">
+    <div class="pop-up-cross">
+      <img class="pop-up-cros-img" src="svg/form-x.svg" alt="крестик">
+    </div>
+    <div class="pop-up-body">
+      <div class="pop-up-body-title">ваш фидбек</div>
+      <div class="pop-up-form-title">Как часто вы заходите на сайт?</div>
+      <form class="pop-up-form-visit">
+       <input class="pop-up-form-visit-text" name="query" placeholder="Почти каждый день" required></form>
+      
+      <div class="pop-up-email-title">Вы подписаны на e-mail рассылку?</div>
+      <div class="pop-up-email-chose">
+        <div class="pop-up-email-answer-img">
+          <img class="answer-img" src="svg/form-circle.svg">
+        </div>
+        <div class="pop-up-email-answer">Да</div>
+        <div class="pop-up-email-answer-img">
+          <img class="answer-img" src="svg/form-empty-circle.svg">
+        </div>
+        <div class="pop-up-email-answer">Нет</div>
+      </div>
+      <div class="pop-up-advice-form-title">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</div>
+      <form class="pop-up-form-advice">
+       <input class="pop-up-form-advice-text" name="query" placeholder="Может, больше рецептов?" required>
+        <button class="pop-up-form-advice-button">отправить</button>
+      </form>
+    </div>
+  </div>
+  <div class="pop-up-background visually-hidden"></div>
 </body>
 </html>

@@ -14,6 +14,7 @@
   body {
     margin: 0; 
     font-family: Open-sans, sans-serif;
+    position: relative;
   }
   
 h1 h2 h3 {
@@ -157,7 +158,7 @@ h1 h2 h3 {
         padding-bottom: 220px;
         padding-top: 30px;
         padding-right: 0;
-        width: 360px; 
+        max-width: 640px; 
     }
 
     .header-top {
@@ -422,7 +423,8 @@ h1 h2 h3 {
     .trends {
         display: block;
         margin-bottom: 44px;
-        width: 360px;
+        max-width: 640px;
+        min-width: 360px;
       }
 
     .trends-card-bg {
@@ -955,8 +957,7 @@ h1 h2 h3 {
       vertical-align: sub;
   }
 
-  @media (min-width: 640px) and (max-width: 1200px)
-   {
+  @media (min-width: 640px) and (max-width: 1200px) {
     .new-posts-title {
         margin-top: 0;
     }
@@ -964,7 +965,8 @@ h1 h2 h3 {
 
    @media (max-width: 640px) {
     .right-column{
-        width: 330px;
+        min-width: 330px;
+        max-width: 640px;
     }
       
       .new-posts-title {
@@ -1049,6 +1051,7 @@ h1 h2 h3 {
     text-transform: uppercase;
     text-align: center;
     margin-top: 64px;
+    margin-bottom: 40px;
     font-weight: bold;
     line-height: 29px;
   }
@@ -1075,6 +1078,8 @@ h1 h2 h3 {
 
 .ad-picture {
     margin: 0 auto;
+    display: block;
+    width: 300px;
 }
 
 
@@ -1192,58 +1197,22 @@ h1 h2 h3 {
     }
     
     .ad-cards-items {
-        margin-top: 300px;
         margin-left: 15px;
+        margin-bottom: 25px;
+    }
+    .ad-picture {
+      width: 285px;
+      margin-left: 30px;
     }
     
     .ad-cards-items-content {
-        width: 330px;
+        min-width: 330px;
         height: 100%;
         padding-left: 22px;
         padding-right: 25px;
         padding-top: 55px;
         padding-bottom: 27px;
         position: relative;
-    }
-    
-    .ad-cards-items-content-pillow::after {
-        position: absolute;
-        content: "";
-        display: block;
-        background-image: url("../images/shop-item-mobile1.jpg");
-        background-repeat: no-repeat;
-        width: 284px;
-        height: 284px;
-        left: 22px;
-        right: 24px;
-        bottom: 235px;
-        z-index: -1;
-    }
-    .ad-cards-items-content-toy::after {
-        position: absolute;
-        content: "";
-        display: block;
-        background-image: url("../images/shop-item-mobile2.jpg");
-        background-repeat: no-repeat;
-        width: 284px;
-        height: 284px;
-        left: 22px;
-        right: 24px;
-        bottom: 235px;
-        z-index: -1;
-    }
-    .ad-cards-items-content-frame::after {
-        position: absolute;
-        content: "";
-        display: block;
-        background-image: url("../images/shop-item-mobile3.jpg");
-        background-repeat: no-repeat;
-        width: 284px;
-        height: 284px;
-        left: 22px;
-        right: 24px;
-        bottom: 235px;
-        z-index: -1;
     }
     .ad-cards-items-content-info-title {
         font-size: 17px;
@@ -1333,3 +1302,207 @@ h1 h2 h3 {
         
     }
   }
+
+.pop-up {
+  position: absolute;
+  top: 70px;
+  left: 40%;
+  margin: 0 auto;	 
+  width: 390px;
+	margin-top: 196px;
+  z-index: 1;
+}
+
+.pop-up-body {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #fff;
+	padding: 53px 32px;
+}
+.pop-up-cross {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 365px;
+	top: -35px
+
+}
+.pop-up-cross-img {
+	width: 100%;
+}
+.pop-up-body-title {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	text-align: center;
+	margin-bottom: 40px;
+	line-height: 29px;
+}
+
+.pop-up-body-title:after {
+	display: block;
+	content: '';
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom: 3px solid #e1d9bd;
+	width: 65px;
+}
+
+.pop-up-form-title {
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 40px;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.pop-up-form-visit {
+	margin-bottom: 33px;
+} 
+
+.pop-up-form-visit-text {
+	box-sizing: border-box;
+	font-size: 13px;
+	color: #000;
+	font-weight: normal;
+	width: 330px;
+	height: 48px;
+	background-color: #f4f7f6;
+	border: none;
+	padding: 20px 25px;
+	background-image: url("../svg/form-arrows.svg");
+	background-repeat: no-repeat;
+	background-size: 8px 16px;
+	background-position: center left 307px;
+
+}
+
+.pop-up-form-visit-text:focus {
+	outline: none;
+	border-bottom: 1px solid #e1d9bd;
+}
+
+.pop-up-email-title {
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.pop-up-email-chose {
+	display: flex;
+	margin-bottom: 34px;
+}
+
+.pop-up-email-answer-img {
+	width: 25px;
+	height: 25px;
+	margin-right: 6px;
+	margin-top: 8px;
+}
+
+.answer-img {
+	width: 100%;
+}
+
+.pop-up-email-answer {
+	font-size: 13px;
+	font-weight: normal;
+	margin-right: 33px;
+	margin-top: 15px;
+}
+
+.pop-up-email-answer:last-child {
+	margin-right: 0;
+}
+
+.pop-up-advice-form-title {
+	font-size: 13px;
+	font-weight: normal;
+	margin-bottom: 12px;
+}
+
+.pop-up-form-advice-text {
+	width: 330px;
+	height: 130px;
+	background-color: #f4f7f6;
+	border: none;
+	padding: 20px 20px 100px;
+  box-sizing: border-box;
+}
+
+.pop-up-form-advice-text:focus {
+	outline: none;
+	border-bottom: 1px solid #e1d9bd;
+}
+
+.pop-up-form-advice-button {
+	width: 330px;
+	height: 48px;
+	background-color: #b59f5b;
+	border: none;
+	font-size: 14px;
+	line-height: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 27px;
+}
+
+.pop-up-background {
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+}
+
+@media (min-width: 640px) and (max-width: 1200px) {
+  .pop-up {
+    left: 25%;
+  }
+}
+
+@media (max-width: 640px) {
+  .pop-up {
+    top: -130px;
+    left: 5px;
+    right: 0;
+    bottom: 0;
+    width: 330px;
+  }
+
+  .pop-up-body {
+    padding: 30px 20px;
+  }
+
+  .pop-up-cross {
+    left: 307px;
+  
+  }
+
+  .pop-up-body-title {
+    font-size: 16px;
+  }
+  .pop-up-form-visit-text {
+    width: 280px;
+    padding: 16px 20px;
+    background-position: center left 256px;
+  
+  }
+  
+  
+  .pop-up-form-advice-text {
+    width: 280px;
+  }
+  
+  
+  .pop-up-form-advice-button {
+    width: 280px;
+  }
+  
+  
+}
